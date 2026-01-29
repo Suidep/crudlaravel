@@ -68,3 +68,6 @@ El proyecto utiliza **phpDocumentor** para la generación de documentación téc
 * **`app/Models`**: Define las relaciones Eloquent (`HasMany` y `BelongsTo`) entre las entidades.
 * **`resources/views`**: Plantillas Blade para la interfaz de usuario, organizadas por módulos.
 * **`routes/web.php`**: Definición de todas las rutas de la aplicación.
+
+---
+Autor: Iker Jiménez
