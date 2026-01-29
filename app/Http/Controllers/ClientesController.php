@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Clientes;
-/* use Illuminate\Container\Attributes\Storage; */
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
@@ -25,9 +24,6 @@ class ClientesController extends Controller
                         ->paginate(10);
 
         return view('clientes.index', compact('clientes', 'buscar'));
-
-        /* $datos['clientes'] = Clientes::paginate(10);
-        return view('clientes.index', $datos); */
     }
 
     /**
