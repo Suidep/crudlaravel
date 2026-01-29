@@ -130,12 +130,18 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Controlador principal para la gestión de clientes.</p>
 
+
+    <section class="phpdocumentor-description"><ul>
+<li>Se encarga de las operaciones CRUD, incluyendo la búsqueda filtrada
+y la gestión de la subida y borrado de logotipos.</li>
+</ul>
+</section>
 
 
 
@@ -172,9 +178,9 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_destroy">destroy()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Remove the specified resource from storage.</dd>
+<dd>Elimina permanentemente un cliente y su archivo de imagen asociado.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_edit">edit()</a>
@@ -186,9 +192,9 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_index">index()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Display a listing of the resource.</dd>
+<dd>Muestra la lista de clientes con opción de búsqueda.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_show">show()</a>
@@ -200,9 +206,9 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_store">store()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Store a newly created resource in storage.</dd>
+<dd>Almacena un nuevo cliente en la base de datos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ClientesController.html#method_update">update()</a>
@@ -239,7 +245,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -274,15 +280,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">132</span>
+    <span class="phpdocumentor-element-found-in__line">148</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Remove the specified resource from storage.</p>
+        <p class="phpdocumentor-summary">Elimina permanentemente un cliente y su archivo de imagen asociado.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">destroy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">destroy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -292,10 +298,12 @@
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-argument-list__argument__name">$id</span>
-                : <span class="phpdocumentor-argument-list__argument__type">mixed</span>
+                : <span class="phpdocumentor-argument-list__argument__type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Identificador del cliente a borrar.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -303,7 +311,15 @@
 
         
     
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Redirección con mensaje de borrado.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -319,7 +335,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
@@ -364,15 +380,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Display a listing of the resource.</p>
+        <p class="phpdocumentor-summary">Muestra la lista de clientes con opción de búsqueda.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">index</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">index</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -385,7 +401,9 @@
                 : <span class="phpdocumentor-argument-list__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Objeto de la petición con el parámetro 'buscar'.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -393,7 +411,15 @@
 
         
     
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\View\View">View</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Vista del índice de clientes con datos paginados.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -409,7 +435,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">73</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 
     </aside>
 
@@ -454,20 +480,25 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Store a newly created resource in storage.</p>
+        <p class="phpdocumentor-summary">Almacena un nuevo cliente en la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">store</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">store</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><ul>
+<li>Valida los campos obligatorios y gestiona el almacenamiento del archivo de logo
+en el disco público.</li>
+</ul>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -475,7 +506,9 @@
                 : <span class="phpdocumentor-argument-list__argument__type"><abbr title="\Illuminate\Http\Request">Request</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Datos del formulario de creación.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -483,7 +516,15 @@
 
         
     
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Redirección al listado tras el éxito.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -499,7 +540,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/ClientesController.php"><a href="files/app-http-controllers-clientescontroller.html"><abbr title="app/Http/Controllers/ClientesController.php">ClientesController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 
     </aside>
 

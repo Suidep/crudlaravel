@@ -88,12 +88,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController",
             "name": "ClientesController",
-            "summary": "",
+            "summary": "Controlador\u0020principal\u0020para\u0020la\u0020gesti\u00F3n\u0020de\u0020clientes.",
             "url": "classes/App-Http-Controllers-ClientesController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Display\u0020a\u0020listing\u0020of\u0020the\u0020resource.",
+            "summary": "Muestra\u0020la\u0020lista\u0020de\u0020clientes\u0020con\u0020opci\u00F3n\u0020de\u0020b\u00FAsqueda.",
             "url": "classes/App-Http-Controllers-ClientesController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController\u003A\u003Acreate\u0028\u0029",
@@ -103,7 +103,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController\u003A\u003Astore\u0028\u0029",
             "name": "store",
-            "summary": "Store\u0020a\u0020newly\u0020created\u0020resource\u0020in\u0020storage.",
+            "summary": "Almacena\u0020un\u0020nuevo\u0020cliente\u0020en\u0020la\u0020base\u0020de\u0020datos.",
             "url": "classes/App-Http-Controllers-ClientesController.html#method_store"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController\u003A\u003Ashow\u0028\u0029",
@@ -123,7 +123,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ClientesController\u003A\u003Adestroy\u0028\u0029",
             "name": "destroy",
-            "summary": "Remove\u0020the\u0020specified\u0020resource\u0020from\u0020storage.",
+            "summary": "Elimina\u0020permanentemente\u0020un\u0020cliente\u0020y\u0020su\u0020archivo\u0020de\u0020imagen\u0020asociado.",
             "url": "classes/App-Http-Controllers-ClientesController.html#method_destroy"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Controller",
@@ -133,17 +133,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\FacturasController",
             "name": "FacturasController",
-            "summary": "",
+            "summary": "Gestiona\u0020la\u0020facturaci\u00F3n\u0020del\u0020sistema.",
             "url": "classes/App-Http-Controllers-FacturasController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\FacturasController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Display\u0020a\u0020listing\u0020of\u0020the\u0020resource.",
+            "summary": "Lista\u0020las\u0020facturas\u0020ordenadas\u0020por\u0020importe\u0020de\u0020forma\u0020ascendente.",
             "url": "classes/App-Http-Controllers-FacturasController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\FacturasController\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "Show\u0020the\u0020form\u0020for\u0020creating\u0020a\u0020new\u0020resource.",
+            "summary": "Prepara\u0020el\u0020formulario\u0020de\u0020creaci\u00F3n\u0020obteniendo\u0020todos\u0020los\u0020clientes\u0020disponibles.",
             "url": "classes/App-Http-Controllers-FacturasController.html#method_create"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\FacturasController\u003A\u003Astore\u0028\u0029",
@@ -188,22 +188,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\Clientes",
             "name": "Clientes",
-            "summary": "",
+            "summary": "Representa\u0020a\u0020un\u0020cliente\u0020en\u0020el\u0020sistema.",
             "url": "classes/App-Models-Clientes.html"
         },                {
             "fqsen": "\\App\\Models\\Clientes\u003A\u003Afacturas\u0028\u0029",
             "name": "facturas",
-            "summary": "",
+            "summary": "Obtiene\u0020todas\u0020las\u0020facturas\u0020asociadas\u0020a\u0020este\u0020cliente\u0020\u0028Relaci\u00F3n\u0020Uno\u0020a\u0020Muchos\u0029.",
             "url": "classes/App-Models-Clientes.html#method_facturas"
         },                {
             "fqsen": "\\App\\Models\\facturas",
             "name": "facturas",
-            "summary": "",
+            "summary": "Representa\u0020una\u0020factura\u0020emitida.",
             "url": "classes/App-Models-facturas.html"
         },                {
             "fqsen": "\\App\\Models\\facturas\u003A\u003Acliente\u0028\u0029",
             "name": "cliente",
-            "summary": "",
+            "summary": "Obtiene\u0020el\u0020cliente\u0020al\u0020que\u0020pertenece\u0020la\u0020factura\u0020\u0028Relaci\u00F3n\u0020Inversa\u0029.",
             "url": "classes/App-Models-facturas.html#method_cliente"
         },                {
             "fqsen": "\\App\\Models\\User",
