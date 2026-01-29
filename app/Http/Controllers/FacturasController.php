@@ -7,10 +7,16 @@ use App\Models\facturas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Gestiona la facturación del sistema.
+ */
 class FacturasController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Lista las facturas ordenadas por importe de forma ascendente.
+     *
+     * @param \Illuminate\Http\Request $request Datos para el filtro de búsqueda por ID.
+     * @return \Illuminate\View\View Vista con la colección de facturas.
      */
     public function index(Request $request)
     {
@@ -26,7 +32,9 @@ class FacturasController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Prepara el formulario de creación obteniendo todos los clientes disponibles.
+     *
+     * @return \Illuminate\View\View Formulario de creación con datos de clientes.
      */
     public function create()
     {

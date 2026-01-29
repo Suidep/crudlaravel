@@ -7,10 +7,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Controlador principal para la gestión de clientes.
+ * * Se encarga de las operaciones CRUD, incluyendo la búsqueda filtrada
+ * y la gestión de la subida y borrado de logotipos.
+ */
 class ClientesController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra la lista de clientes con opción de búsqueda.
+     *
+     * @param \Illuminate\Http\Request $request Objeto de la petición con el parámetro 'buscar'.
+     * @return \Illuminate\View\View Vista del índice de clientes con datos paginados.
      */
     public function index(Request $request)
     {
@@ -36,7 +44,12 @@ class ClientesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Almacena un nuevo cliente en la base de datos.
+     * * Valida los campos obligatorios y gestiona el almacenamiento del archivo de logo
+     * en el disco público.
+     *
+     * @param \Illuminate\Http\Request $request Datos del formulario de creación.
+     * @return \Illuminate\Http\RedirectResponse Redirección al listado tras el éxito.
      */
     public function store(Request $request)
     {
@@ -127,7 +140,10 @@ class ClientesController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina permanentemente un cliente y su archivo de imagen asociado.
+     *
+     * @param int $id Identificador del cliente a borrar.
+     * @return \Illuminate\Http\RedirectResponse Redirección con mensaje de borrado.
      */
     public function destroy($id)
     {
