@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturalineasController;
 use App\Http\Controllers\FacturasController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\App;
@@ -8,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('home');
 });
 
 
@@ -35,6 +36,7 @@ Route::get('/clientes/edit', [ClientesController::class, 'edit']); */
 
 Route::resource('clientes', ClientesController::class)->middleware('auth');
 Route::resource('facturas', FacturasController::class)->middleware('auth');
+Route::resource('facturalineas', FacturalineasController::class)->middleware('auth');
 
 Auth::routes(['register' => false, 'reset' => false]);
 

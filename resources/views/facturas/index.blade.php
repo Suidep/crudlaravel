@@ -41,10 +41,10 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($facturas as $factura)
+                @if (isset($factura))
                     <tr>
                         <td>{{ $factura->id }}</td>
-                        <td>{{ $factura->cliente_id }}</td>
+                        <td><a href="{{ url('/clientes/' . $factura->cliente_id) }}">{{ $factura->cliente_id }}</a></td>
                         <td>{{ $factura->numero }}</td>
                         <td>{{ $factura->fecha }}</td>
                         <td>{{ $factura->base }}</td>
@@ -59,7 +59,27 @@
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                @else
+                    @foreach ($facturas as $factura)
+                        <tr>
+                            <td>{{ $factura->id }}</td>
+                            <td><a href="{{ url('/clientes/' . $factura->cliente_id) }}">{{ $factura->cliente_id }}</a></td>
+                            <td>{{ $factura->numero }}</td>
+                            <td>{{ $factura->fecha }}</td>
+                            <td>{{ $factura->base }}</td>
+                            <td>{{ $factura->importeiva }}</td>
+                            <td>{{ $factura->importe }}</td>
+                            <td>
+                                <a class="btn btn-success" href="{{ url('/facturas/' . $factura->id . '/edit') }}">Editar</a>
+                                <form action="{{ url('/facturas/' . $factura->id) }}"  method="POST" class="d-inline">
+                                    @csrf
+                                    {{ method_field('DELETE') }}
+                                    <input class="btn btn-danger" type="submit" onclick="return confirm('¿Quiere borrar la factura seleccionada?')" value="Borrar">
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
             </tbody>
             <tfoot>
                 <tr>
@@ -67,7 +87,7 @@
                 </tr>
             </tfoot>
         </table>
-        {{ $facturas->links() }}
+        {{ isset($factura) ? '' : $facturas->links() }}
     </div>
     @endsection
 </body>

@@ -33,6 +33,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('clientes.index') }}">Clientes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('facturas.index') }}">Facturas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('facturalineas.index') }}">Facturas Líneas</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

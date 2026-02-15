@@ -60,9 +60,13 @@ class FacturasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(facturas $facturas)
+    public function show($id)
     {
         //
+        $buscar = "";
+        $factura = facturas::findOrFail($id);
+
+        return view('facturas.index', compact('factura', 'buscar'));
     }
 
     /**
@@ -80,17 +84,25 @@ class FacturasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, facturas $facturas)
+    public function update(Request $request, $id)
     {
         //
-        
+        $datos = $request->except(['_token', '_method']);
+
+        facturas::where('id', '=', $id)->update($datos);
+
+        return redirect('facturas')->with('mensaje', 'Factura actualizada correctamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(facturas $facturas)
+    public function destroy($id)
     {
         //
+
+        facturas::destroy($id);
+
+        return redirect('facturas')->with('mensaje', 'Factura borrada exitosamente');
     }
 }

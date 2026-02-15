@@ -16,6 +16,6 @@ class Clientes extends Model
      * * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function facturas(){
-        return $this->hasMany('App\Models\facturas');
+        return $this->hasMany('App\Models\facturas', 'cliente_id');
     }
 }

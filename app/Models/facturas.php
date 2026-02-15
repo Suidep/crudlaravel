@@ -14,6 +14,10 @@ class facturas extends Model
      * * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function cliente(){
-        return $this->belongsTo('App\Models\clientes');
+        return $this->belongsTo('App\Models\clientes', 'cliente_id');
+    }
+
+    public function facturalineas(){
+        return $this->hasMany('App\Models\facturalineas', 'id_factura');
     }
 }

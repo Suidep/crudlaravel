@@ -83,9 +83,13 @@ class ClientesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Clientes $clientes)
+    public function show($id)
     {
         //
+        $cliente = Clientes::findOrFail($id);
+        $buscar = "";
+
+        return view('clientes.index', compact('cliente', 'buscar'));
     }
 
     /**

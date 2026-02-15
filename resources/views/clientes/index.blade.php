@@ -41,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($clientes as $cliente)
+                @if (isset($cliente))
                     <tr>
                         <td>{{ $cliente->id }}</td>
                         <td>{{ $cliente->nombre }}</td>
@@ -59,7 +59,27 @@
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                @else
+                    @foreach ($clientes as $cliente)
+                        <tr>
+                            <td>{{ $cliente->id }}</td>
+                            <td>{{ $cliente->nombre }}</td>
+                            <td>{{ $cliente->direccion }}</td>
+                            <td>{{ $cliente->email }}</td>
+                            <td>{{ $cliente->telefono }}</td>
+                            <td>{{ $cliente->logo }}</td>
+                            <td><img class="img-thumbnail img-fluid" src="{{ asset('storage') . '/' . $cliente->logo }}" id="image-preview" height="70" alt=""></td>
+                            <td>
+                                <a class="btn btn-success" href="{{ url('/clientes/' . $cliente->id . '/edit') }}">Editar</a>
+                                <form action="{{ url('/clientes/' . $cliente->id) }}"  method="POST" class="d-inline">
+                                    @csrf
+                                    {{ method_field('DELETE') }}
+                                    <input class="btn btn-danger" type="submit" onclick="return confirm('¿Quiere borrar el cliente seleccionado?')" value="Borrar">
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif                
             </tbody>
             <tfoot>
                 <tr>
@@ -67,7 +87,9 @@
                 </tr>
             </tfoot>
         </table>
-        {{ $clientes->links() }}
+        @if (empty($cliente) && isset($clientes))
+            {{ $clientes->links() }} 
+        @endif      
     </div>
     @endsection
 </body>
